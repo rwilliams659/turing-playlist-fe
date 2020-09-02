@@ -19,6 +19,12 @@ class App extends Component {
       .catch(error => console.log(error))
   }
 
+  addNewSong = (song) => {
+    let newSongQueue = [...this.state.songQueue];
+    newSongQueue.push(song)
+    this.setState({ songQueue: newSongQueue})
+  }
+
   render() {
     return (
       <div className="App">
@@ -28,9 +34,10 @@ class App extends Component {
         <div className="App-background">
           <main>
             <Playlist 
-            songs={this.state.songQueue}
+              songs={this.state.songQueue}
             />
             <AddSongForm
+              addNewSong={this.addNewSong}
             />
           </main>
         </div> 
