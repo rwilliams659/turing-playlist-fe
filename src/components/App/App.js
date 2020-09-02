@@ -20,9 +20,21 @@ class App extends Component {
   }
 
   addNewSong = (song) => {
-    let newSongQueue = [...this.state.songQueue];
-    newSongQueue.push(song)
-    this.setState({ songQueue: newSongQueue})
+    fetch('http://localhost:8080/api/v1/playlist', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(song)
+    })
+      .then(response => response.json())
+      .then(song => {
+        console.log(song)
+        let newSongQueue = [...this.state.songQueue];
+        newSongQueue.push(song)
+        this.setState({ songQueue: newSongQueue })
+      })
+      .catch(error => console.log(error))
   }
 
   render() {
