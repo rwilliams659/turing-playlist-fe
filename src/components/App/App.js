@@ -10,6 +10,12 @@ class App extends Component {
     }
   }
 
+  componentDidMount() {
+    fetch('http://localhost:8080/api/v1/playlist')
+      .then(response => response.json())
+      .then(playlist => this.setState({songQueue: playlist}))
+      .catch(error => console.log(error))
+  }
 
   render() {
     return (
