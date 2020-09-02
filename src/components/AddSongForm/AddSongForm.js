@@ -43,7 +43,12 @@ class AddSongForm extends Component {
         link: this.state.link
       }
       this.props.addNewSong(song); 
+      this.clearInputs(event); 
     }
+  }
+
+  clearInputs() {
+    this.setState({ songName: '', artistName: '', link: ''});
   }
 
 }
