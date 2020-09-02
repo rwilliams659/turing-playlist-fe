@@ -1,10 +1,14 @@
 import React from 'react';
 import './Song.css'
 
-const Song = () => {
+const Song = ({ songName, artistName, link, id}) => {
 
-  render (
-
+  return (
+    <article className='Song' id={id}>
+      <h3>{songName}</h3>
+      <h4>{artistName}</h4>
+      <a href={link}>Listen now!</a>
+    </article>
   )
 }
 

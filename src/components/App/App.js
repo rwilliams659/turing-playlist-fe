@@ -27,7 +27,8 @@ class App extends Component {
         <div className="App-background">
           <main>
             <Playlist 
-            songs={this.songQueue}/>
+            songs={this.state.songQueue}
+            />
           </main>
         </div> 
       </div>
