@@ -13,9 +13,12 @@ const Playlist = ({songs}) => {
       /> )
   
     return (
-    <section className='Playlist'>
-      {songList}
-    </section>
+    <>
+      <h2>Time to Turn Up the Tunes!</h2>  
+      <section className='Playlist'>
+        {songList}
+      </section>
+    </>
   )
 }
 
