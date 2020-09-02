@@ -39,4 +39,5 @@ main {
   font-family: 'Rubik';
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(2px);
+  display: flex; 
 }

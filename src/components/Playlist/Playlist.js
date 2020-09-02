@@ -13,12 +13,12 @@ const Playlist = ({songs}) => {
       /> )
   
     return (
-    <>
-      <h2>Time to Turn Up the Tunes!</h2>  
+    <section className='playlist-left'>
+      <h2>Current Playlist</h2>  
       <section className='Playlist'>
         {songList}
       </section>
-    </>
+    </section>
   )
 }
 
