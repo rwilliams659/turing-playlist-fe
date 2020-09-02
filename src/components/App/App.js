@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Playlist from '../Playlist/Playlist'
+import AddSongForm from '../AddSongForm/AddSongForm'
 import SongController from '../SongController/SongController';
 
 class App extends Component {
@@ -28,6 +29,8 @@ class App extends Component {
           <main>
             <Playlist 
             songs={this.state.songQueue}
+            />
+            <AddSongForm
             />
           </main>
         </div> 
