@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Playlist from '../Playlist/Playlist'
 import SongController from '../SongController/SongController';
 
 class App extends Component {
@@ -25,6 +26,8 @@ class App extends Component {
         </header>
         <div className="App-background">
           <main>
+            <Playlist 
+            songs={this.songQueue}/>
           </main>
         </div> 
       </div>
